@@ -1,8 +1,10 @@
-
-export default function Home() {
+import Header from '../components/Header/Header';
+ 
+export default function Page() {
   return (
     <main className="">
-      <p className="hover:bg-blue-400">Blog page</p>
+      <Header />
+      <p className="font-medium hover:text-blue-400">Blog page</p>
     </main>
   );
 }
