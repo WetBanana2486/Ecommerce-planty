@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) ecommerce project styled with Tailwind CSS.
+This is a my ecommerce project for a plant shop.
 
 ## Getting Started
 
