@@ -1,37 +1,5 @@
 import Link from 'next/link';
 
-
-const slidesData = [
-  {
-    id: 1,
-    imageUrl: 'https://via.placeholder.com/1600x600?text=Welcome+to+Planty', // Example placeholder
-    altText: 'Lush green plants in a well-lit room',
-    title: 'Bring Nature Indoors',
-    description: 'Discover a wide variety of beautiful and healthy indoor plants to brighten your space.',
-    ctaText: 'Shop Our Collection',
-    ctaLink: '/shop', // Update with your actual shop link
-  },
-  {
-    id: 2,
-    imageUrl: 'https://via.placeholder.com/1600x600?text=Gardening+Essentials', // Example placeholder
-    altText: 'Gardening tools and supplies',
-    title: 'Everything Your Garden Needs',
-    description: 'Find top-quality tools, soil, and accessories for your gardening projects.',
-    ctaText: 'Explore Supplies',
-    ctaLink: '/supplies', // Update with your actual supplies link
-  },
-  {
-    id: 3,
-    imageUrl: 'https://via.placeholder.com/1600x600?text=Expert+Plant+Care', // Example placeholder
-    altText: 'A person carefully tending to a plant',
-    title: 'Expert Plant Care Advice',
-    description: 'Learn how to care for your plants with our guides and tips from experts.',
-    ctaText: 'Read Our Blog',
-    ctaLink: '/blog',
-  },
-];
-
-
 export default function Home() {
   return (
     <main>
