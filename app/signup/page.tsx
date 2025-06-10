@@ -7,6 +7,9 @@ export default function Signup() {
         <Button className="mt-4" variant="default">
           Sign Up
         </Button>
+        <Button className="mt-4" variant="default">
+          Cancel
+        </Button>
     </main>
   );
 }
