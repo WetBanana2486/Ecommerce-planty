@@ -19,18 +19,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <Head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-      </Head>
+
       <body className="flex flex-col min-h-full bg-slate-50"> {/* Use min-h-full or min-h-screen */}
         {/* <Navbar /> */}
         <Header />
         <main className="flex-grow"> {/* flex-grow to push the footer down */}
           {children}
         </main>
-        
+
         <Footer />
       </body>
     </html>
