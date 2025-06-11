@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en" className="h-full">
 
       <body className="flex flex-col min-h-full bg-slate-50"> {/* Use min-h-full or min-h-screen */}
-        {/* <Navbar /> */}
+        
         <Header />
         <main className="flex-grow"> {/* flex-grow to push the footer down */}
           {children}
