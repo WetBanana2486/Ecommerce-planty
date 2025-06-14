@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import * as React from "react"
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -9,6 +9,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
   NavigationMenuViewport,
+  navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu"
 
 const components: { title: string; href: string; description: string }[] = [
@@ -57,24 +58,49 @@ export default function Header() {
             <NavigationMenuItem>
               <NavigationMenuTrigger>Home</NavigationMenuTrigger>
               <NavigationMenuContent>
-                <NavigationMenuLink>
-                  <Link href="/about">About</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink>
-                  <Link href="/contact">Contact</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink>
-                  <Link href="/blog">Blog</Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink>
-                  <Link href="/products">Products</Link>
-                </NavigationMenuLink>
-                  
+                <ul className="grid gap-2 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
+                  <li className="row-span-3">
+                    
+                    <NavigationMenuLink>
+                      <Link href="/contact">Contact</Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink>
+                      <Link href="/blog">Blog</Link>
+                    </NavigationMenuLink>
+                    <NavigationMenuLink>
+                      <Link href="/products">Products</Link>
+                    </NavigationMenuLink>
+                  </li>
+                </ul>  
               </NavigationMenuContent>
             </NavigationMenuItem>
+            <NavigationMenuItem>
+              <NavigationMenuTrigger>Category</NavigationMenuTrigger>
+              <NavigationMenuContent>
+                <ul className="grid w-[200px] gap-4"> 
+                  <li>
+                <NavigationMenuLink asChild>
+                  <Link href="#">1</Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <Link href="#">2</Link>
+                </NavigationMenuLink>
+                <NavigationMenuLink asChild>
+                  <Link href="#">3</Link>
+                </NavigationMenuLink>
+              </li>
+                </ul>
+              </NavigationMenuContent>
+            </NavigationMenuItem>
+            <NavigationMenuItem>
+          <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
+            <Link href="/docs">About</Link>
+          </NavigationMenuLink>
+        </NavigationMenuItem>
           </NavigationMenuList>
         </NavigationMenu>
         
     </header>
   );
 }
+
