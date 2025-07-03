@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 
@@ -16,7 +18,11 @@ function getProductById(id: number) {
   return products.find((product) => product.id === id);
 }
 
-export default function ProductDetailPage({ params }: { params: { id: string } }) {
+interface ProductDetailPageProps {
+  params: { id: string };
+}
+
+export default function ProductDetailPage({ params }: any) {
   const product = getProductById(Number(params.id));
 
   if (!product) {
