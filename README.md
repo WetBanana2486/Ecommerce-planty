@@ -1,4 +1,4 @@
-This is a ecommerce project for a plant shop.
+This is a frontend ecommerce project.
 
 ## Getting Started
 

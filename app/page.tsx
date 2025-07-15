@@ -10,6 +10,17 @@ const recommendedProducts = [
   { id: 4, name: "Linen Throw Pillow", price: "$55.00", imageUrl: "/placeholder.svg" },
 ];
 
+export async function getStaticProps() {
+  const res = await fetch('http://backend:3000/api/hero-items'); // Or /media from
+  const heroItems = await res.json();
+
+  return {
+    props: { heroItems },
+    revalidate: 60, // Incremental Static Regeneration：Every 60 seconds
+  };
+}
+
+
 export default function Home() {
   return (
     <main>
